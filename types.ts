@@ -4,6 +4,8 @@ export interface Movie {
   bookId?: string | number; // Used for Dramabox streaming
   imdbId?: string; // Used for Global catalog streaming
   id_archive?: string; // Used for Archive.org public domain streaming
+  // direct_video_url is used for high-quality direct MP4 streams from Pexels and NASA
+  direct_video_url?: string;
   title: string;
   thumbnail: string;
   poster?: string;
