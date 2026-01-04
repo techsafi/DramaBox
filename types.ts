@@ -1,7 +1,9 @@
 
 export interface Movie {
   id: string | number;
-  bookId?: string | number; // Used for streaming
+  bookId?: string | number; // Used for Dramabox streaming
+  imdbId?: string; // Used for Global catalog streaming
+  id_archive?: string; // Used for Archive.org public domain streaming
   title: string;
   thumbnail: string;
   poster?: string;
@@ -12,6 +14,9 @@ export interface Movie {
   release_year?: string | number;
   category?: string;
   episodes?: number;
+  type?: 'movie' | 'show' | 'classic';
+  rating?: string | number;
+  runtime?: string;
 }
 
 export interface Category {
@@ -30,4 +35,5 @@ export interface StreamData {
   url: string;
   title?: string;
   quality?: string;
+  isEmbed?: boolean;
 }
